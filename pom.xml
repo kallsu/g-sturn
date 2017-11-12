@@ -61,12 +61,31 @@
 
 		<!-- Java version -->
 		<java.version>1.8</java.version>
+
+		<!-- G-Library version -->
+		<g-common.version>1.1.6</g-common.version>
+		<g-logger.version>1.2.1</g-logger.version>
+
 	</properties>
 
 	<!-- ============================================================================= -->
 	<!-- Dependencis Information -->
 	<!-- ============================================================================= -->
 	<dependencies>
+
+		<!-- G-Common -->
+		<dependency>
+			<groupId>net.sf.gee</groupId>
+			<artifactId>g-common</artifactId>
+			<version>${g-common.version}</version>
+		</dependency>
+
+		<!-- G-Logger -->
+		<dependency>
+			<groupId>net.sf.gee</groupId>
+			<artifactId>g-logger</artifactId>
+			<version>${g-logger.version}</version>
+		</dependency>
 
 		<!-- ICU -->
 		<dependency>

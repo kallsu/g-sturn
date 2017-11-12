@@ -28,15 +28,14 @@ import net.sf.gee.l2mn.stun.message.MessageTypeEnum;
 import net.sf.gee.l2mn.stun.message.attribute.MessageAttribute;
 import net.sf.gee.l2mn.stun.message.attribute.MessageAttributeType;
 import net.sf.gee.l2mn.stun.message.attribute.XorMappedAddress;
-import net.sf.gee.l2mn.stun.transport.UDPStunTransporter;
+import net.sf.gee.l2mn.stun.transport.StunTransporter;
 import net.sf.gee.l2mn.stun.util.StunUtil;
 
 /**
  * @author Giorgio Desideri - giorgio.desideri@gmail.com
  *
  */
-public class UDPStunTransportTest {
-
+public class StunTransportTest {
 
   @Test
   public void test() {
@@ -50,7 +49,7 @@ public class UDPStunTransportTest {
     request.getHeader().setMagicCookie(magicCookie);
     request.getHeader().setLength(0);
 
-    try (UDPStunTransporter st = new UDPStunTransporter("stun4.l.google.com", 19305);) {
+    try (StunTransporter st = new StunTransporter("stun4.l.google.com", 19305);) {
       // execute bind
       Message response = st.doBind(request);
 
